@@ -89,5 +89,3 @@ with col3:
     st.header('Moyenne annuelle:')
     st.write(predictionm)
 
-
-st.balloons()

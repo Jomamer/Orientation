@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-!pip install sklearn
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import neighbors, linear_model
 

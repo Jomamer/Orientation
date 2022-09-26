@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn import neighbors, linear_model
+from sklearn import linear_model, svm
 
 st.write('''
 # Prédiction des orientations académiques
@@ -43,9 +43,9 @@ df = user_input()
 st.subheader('Moyennes insérées')
 st.write(df)
 
-dataa = pd.read_csv('MoyennesBinNew.csv',encoding='latin-1')
-datas = pd.read_csv('MoyennesBinairesNew.csv',encoding='latin-1')
-datam = pd.read_csv('MoyennesFinalesNew.csv',encoding='latin-1')
+dataa = pd.read_csv('MoyennesBinSeptembre22.csv',encoding='latin-1')
+datas = pd.read_csv('MoyennesBinairesSeptembre22.csv',encoding='latin-1')
+datam = pd.read_csv('MoyennesFinalesSeptembre22.csv',encoding='latin-1')
 
 Xa = dataa.iloc[:, 0:12]
 ya = dataa.iloc[:, 13]
@@ -55,11 +55,11 @@ Xm = datam.iloc[:, 0:12]
 ym = datam.iloc[:, 12]
 
 
-knn = neighbors.KNeighborsClassifier(n_neighbors=15)
+lsvc = svm.SVC(kernel='linear')
 rfc = RandomForestClassifier(n_estimators=100, oob_score=True)
 lr = linear_model.LinearRegression()
 modela = rfc.fit(Xa, ya)
-models = rfc.fit(Xs, ys)
+models = lsvc.fit(Xs, ys)
 modelm = lr.fit(Xm, ym)
 
 

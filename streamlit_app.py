@@ -5,7 +5,7 @@ from sklearn import linear_model, svm
 
 st.write('''
 # Prediction of academic orientations
-This application predicts the learner's ability, series and yearly average in 10th grade''')
+This application predicts the learner's ability, classes and yearly average in 10th grade''')
 
 st.sidebar.header("Insert learner's averages from 6th grade to 9th grade")
 def user_input():
@@ -77,7 +77,7 @@ with col1:
         st.write('Scientific')
 
 with col2:
-    st.header("Series:")
+    st.header("Classes:")
     if predictions == 0:
         st.write('A')
     if predictions == 1:

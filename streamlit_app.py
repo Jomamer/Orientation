@@ -11,16 +11,16 @@ st.sidebar.header("Insert learner's averages from 6th grade to 9th grade")
 def user_input():
         mm6 = st.sidebar.slider('Maths 6th grade', 0, 20, 10)
         mpc6 = st.sidebar.slider('PCT 6th grade', 0, 20, 10)
-        ms6 = st.sidebar.slider('SVT 6th grade', 0, 20, 10)
+        ms6 = st.sidebar.slider('LES 6th grade', 0, 20, 10)
         mm5 = st.sidebar.slider('Math 7th', 0, 20, 10)
         mpc5 = st.sidebar.slider('PCT 7th grade', 0, 20, 10)
-        ms5 = st.sidebar.slider('SVT 7th grade', 0, 20, 10)
+        ms5 = st.sidebar.slider('LES 7th grade', 0, 20, 10)
         mm4 = st.sidebar.slider('Maths 8th grade', 0, 20, 10)
         mpc4 = st.sidebar.slider('PCT 8th grade', 0, 20, 10)
-        ms4 = st.sidebar.slider('SVT 8th grade', 0, 20, 10)
+        ms4 = st.sidebar.slider('LES 8th grade', 0, 20, 10)
         mm3 = st.sidebar.slider('Maths 9th grade', 0, 20, 10)
         mpc3 = st.sidebar.slider('PCT 9th grade', 0, 20, 10)
-        ms3 = st.sidebar.slider('SVT 9th grade', 0, 20, 10)
+        ms3 = st.sidebar.slider('LES 9th grade', 0, 20, 10)
         moyennes = {
             'mm6': mm6,
             'mpc6': mpc6,

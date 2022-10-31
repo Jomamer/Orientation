@@ -50,16 +50,13 @@ Xa = dataa.iloc[:, 0:12]
 ya = dataa.iloc[:, 13]
 Xs = datas.iloc[:, 0:12]
 ys = datas.iloc[:, 13]
-Xm = datam.iloc[:, 0:12]
-ym = datam.iloc[:, 12]
-
 
 lsvc = svm.SVC(kernel='linear')
 rfc = RandomForestClassifier(n_estimators=100, oob_score=True)
-lr = linear_model.LinearRegression()
+
 modela = rfc.fit(Xa, ya)
 models = lsvc.fit(Xs, ys)
-modelm = lr.fit(Xm, ym)
+
 
 predictiona = modela.predict(df)
 predictions = models.predict(df)
